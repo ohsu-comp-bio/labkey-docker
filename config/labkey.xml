@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<Context docBase="@@appDocBase@@" reloadable="true" crossContext="true">
+<Context docBase="/usr/local/labkey/labkeywebapp" reloadable="true" crossContext="true">
     
     <Resource name="jdbc/labkeyDataSource" auth="Container"
         type="javax.sql.DataSource"
