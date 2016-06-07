@@ -11,3 +11,4 @@ This is a dockerized version of Labkey
 
 * Copy the Labkey archive into the 'lib' folder
 * Run: `docker-compose up -d`
+* Go to: http://localhost:18888/labkey/
