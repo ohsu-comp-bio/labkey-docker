@@ -6,6 +6,7 @@ webserver:
     - database:database
   volumes:
     - ./config/:/usr/local/tomcat/conf/Catalina/localhost/
+    - ./files/:/usr/local/labkey/files/
 
 database:
   image: postgres:9.5.3
@@ -13,3 +14,5 @@ database:
     - 5432
   environment:
     POSTGRES_PASSWORD: labkeydbpass
+  volumes:
+    - ./data/:/var/lib/postgresql/data/

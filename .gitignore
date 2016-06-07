@@ -1,1 +1,3 @@
 *.tar.gz
+db_data/
+labkey_files/
