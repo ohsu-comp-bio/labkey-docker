@@ -16,3 +16,9 @@ This is a dockerized version of [Labkey server](http://www.labkey.com/products-s
 * Copy the Labkey archive into the 'lib' folder
 * Run: `docker-compose up -d`
 * Go to: http://localhost:18888/labkey/
+
+# Acknowledgements
+
+This work has been funded by the European Union Seventh Framework Program (FP7/2007­2013) under grant agreement no. 604102 (HBP)
+
+This work is part of SP8 of the Human Brain Project (SGA1).
