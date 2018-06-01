@@ -4,18 +4,28 @@
 
 ## What is it ?
 
-This is a dockerized version of [Labkey server](http://www.labkey.com/products-services/labkey-server/)
+This is a dockerized version of [Labkey server](http://www.labkey.com/products-services/labkey-server/) suitable for testing
 
 ## Prerequisites
 
 * [Docker Compose](https://docs.docker.com/compose/)
-* [Labkey](http://www.labkey.com/products-services/labkey-server/download-community-edition/)
 
 ## How to use it ?
 
-* Copy the Labkey archive into the 'lib' folder
 * Run: `docker-compose up -d`
+  * downloads and instantiates the labkey community edition (18.1) in a lightweight java/tomcat container (tomcat:8-jre8)
+  * starts a vanilla postgres instance
+
 * Go to: http://localhost:18888/labkey/
+
+### volumes
+
+labkey:
+  - ./config/:/usr/local/tomcat/conf/Catalina/localhost/
+  - ./files/:/usr/local/labkey/files/
+
+postgres:
+  - ./data/:/var/lib/postgresql/data/
 
 # Acknowledgements
 
