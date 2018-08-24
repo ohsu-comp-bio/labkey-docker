@@ -36,9 +36,7 @@ postgres:
 
 ## Demo
 
-![image](https://user-images.githubusercontent.com/47808/44559690-894a8100-a700-11e8-8321-535afacf81cc.png)
-
-![image](https://user-images.githubusercontent.com/47808/44559534-8d29d380-a6ff-11e8-8751-e399a22902c4.png)
+![image](https://user-images.githubusercontent.com/47808/44594360-d3704880-a77a-11e8-921b-1d32a1b0db62.png)
 
 
 ## What's not included
@@ -49,4 +47,4 @@ postgres:
 
 ## Known issues
 
-* appbase.io's abc tool only supports ES 5.6 not 6.x
+* by default, appbase.io's abc tool supports ES 5.6 not 6.x.  A [workaround](https://github.com/appbaseio/abc/issues/102) exists
