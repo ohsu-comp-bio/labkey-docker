@@ -1,10 +1,16 @@
 # Labkey
 
-[![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](http://www.labkey.com/products-services/labkey-server/download-community-edition/) [![DockerHub](https://img.shields.io/badge/docker-lren%2Flabkey-008bb8.svg)](https://hub.docker.com/r/lren/labkey/) [![CircleCI](https://circleci.com/gh/LREN-CHUV/labkey-docker/tree/master.svg?style=svg)](https://circleci.com/gh/LREN-CHUV/labkey-docker/tree/master) [![ImageVersion](https://images.microbadger.com/badges/version/lren/labkey.svg)](https://hub.docker.com/r/lren/labkey/tags "lren/labkey image tags") [![ImageLayers](https://images.microbadger.com/badges/image/lren/labkey.svg)](https://microbadger.com/#/images/lren/labkey "lren/labkey on microbadger")
 
 ## What is it ?
 
 This is a dockerized version of [Labkey server](http://www.labkey.com/products-services/labkey-server/) suitable for testing
+
+## What else is here?
+
+* Elastic Search 5.6.11 - a search engine
+* Kibana 5.6.11 - an analyst tool
+* appbase.io's abc - a synchronization CLI tool
+
 
 ## Prerequisites
 
@@ -26,9 +32,21 @@ labkey:
 
 postgres:
   - ./data/:/var/lib/postgresql/data/
+  - ./config/postgres.conf:/var/lib/postgresql/data/postgresql.conf
 
-# Acknowledgements
+## Demo
 
-This work has been funded by the European Union Seventh Framework Program (FP7/2007­2013) under grant agreement no. 604102 (HBP)
+![image](https://user-images.githubusercontent.com/47808/44559690-894a8100-a700-11e8-8321-535afacf81cc.png)
 
-This work is part of SP8 of the Human Brain Project (SGA1).
+![image](https://user-images.githubusercontent.com/47808/44559534-8d29d380-a6ff-11e8-8751-e399a22902c4.png)
+
+
+## What's not included
+
+* OHSU data
+* Authorization
+* Realtime data update
+
+## Known issues
+
+* appbase.io's abc tool only supports ES 5.6 not 6.x
